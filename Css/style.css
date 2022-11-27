@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Quicksand&family=Sacramento&display=swap');
+
+:root{
+    --main-color: #FCD7D7;
+    --secondary : #92DAD4;
+    --third:#FF004E;
+    --bg: #f2f1ec; 
+    --black: #000;
+    --white: #ffffff;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    --main-font: 'Sacramento', cursive;
+}
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: none;
+}
+
+section[id]{
+    scroll-margin-top: 87px;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/*------------Estilo base-----------*/
+img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+body{
+    background: var(--bg);
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+    
+.container-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.column{
+    width: 100%;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: var(--third);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--secondary);
+    color: var(--black);
+}
+
+/*-------- Estilo de header --------*/
+.main-header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 2000;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0.1rem 9%;
+}
+
+.main-nav{
+    width: 100%;
+    height: 8rem;
+    position: relative;
+}
+
+.logo{
+    height: 6.5rem;
+    padding-right: .5rem;
+}
+
+.logo-title{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    font-family: var(--main-font); 
+}
+
+.icons{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.menu{
+    position:absolute;
+    top: 81px;
+    right: -27px;
+    width: 140px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height .3s linear;
+}
+
+.menu-link{
+    display: block;
+    padding: .9rem 2%;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.menu-link:hover{
+    background: var(--secondary);
+}
+
+.menu-link-select{
+    background: var(--secondary);
+}
+
+.mostrar{
+    height: 186px;
+}
+
+/*-------- Estilo de banner --------*/
+
+.banner{
+    position: relative;
+}
+
+.banner:before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(255, 255, 255, 0.45)
+}
+
+.banner-img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.banner-content{
+    width: 90%;
+    color: var(--black);
+    text-align: center;
+    font-family:var(--main-font);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-32%);
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+/*-------- Estilo de nosotros --------*/
+.about-us{
+    margin-top: 6rem;
+}
+
+.about-us .column:nth-child(2){
+    padding: 10xp;
+}
+
+/*---------- Estilo de menu ---------*/
+
+.group-menu .column{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.group-title{
+    font-family: var(--main-font);
+    text-align: center;
+    font-weight: 100px;
+    font-size: 2rem;
+    margin: 30px;
+    padding-top: 3rem;
+}
+
+.menu-img{
+    margin:auto;
+    max-width: 350px;
+}
+
+.menu-title{
+    font-size: 1.3rem;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.menu-price{
+    font-size: 1.5rem;
+    color: var(--third); 
+    font-weight: bold;
+}
+
+/*---------- Estilo de galeria ---------*/
+.heading{
+    font-family: var(--main-font);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.2rem 0;
+    font-size: 4rem;
+}
+
+.gallery{
+    padding: 2rem 7%;
+    width: 128rem;
+    margin-left: 3.2rem;
+}
+
+.gallery .gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 1.7rem;
+}
+
+.gallery .gallery-container .box{
+    height: 24rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .gallery-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .gallery-container .box:hover img{
+    transform: scale(1.1);
+}
+
+.gallery .gallery-container .box .icons{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery .gallery-container .box .icons i{
+    font-size: 6rem;
+    color: var(--white);
+}
+
+.gallery .gallery-container .box:hover .icons{
+    display: flex;
+}
+
+/*---------- Estilo de footer ---------*/
+.main-footer{
+    background: #222;
+    height: 13rem;
+    color:var(--white);
+    margin-top: 3rem;
+}
+
+.contenedor{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 9rem;
+}
+
+.copy{
+    text-align: center;
+    margin: auto;
+    margin-top: 1.8rem;
+    font-size: 1.2rem;
+}
+
+.column-icon{
+    position: relative;
+    top: 3px;
+    font-size: 1.3rem;
+}
+
+/*---------- Estilo responsive ---------*/
+@media screen and (min-width:480px) {
+    .icons{
+        text-align: right;
+    }
+
+
+    .about-us .column:nth-child(2){
+        padding-left: 20px;
+        font-size: .9rem;
+    }
+
+
+    .btn-contact{
+        margin:.3rem 0 .3rem 0;
+    }
+
+    .group-menu .column{
+        border: .3rem solid #ddd;
+        padding: .3rem;
+    }
+
+    .menu-img{
+        height: 12.5rem;
+        object-fit: cover;
+    }
+
+    .column-50{
+        width: 49%;
+    }
+
+    .column .column-50-25{
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .about-us{
+        font-size: 2rem;
+    }
+
+    .about-us .column-50:nth-child(2){
+        font-size: 1.8rem;
+    }
+
+    .about-us .column-50:nth-child(2) .column-text{
+        line-height: 1.8rem;
+        margin: .7rem 0 .7rem 0;
+    }
+
+    .column-50-25{
+        width: 18%;
+    }
+
+    .column-title{
+        font-size: 1rem;
+    }
+
+    .group-title{
+        font-size: 2.5rem;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .container{
+        width: 110rem;
+    }
+
+    .about-us .column-50:nth-child(2) .column-text{
+        line-height: 2.3rem;
+        margin: 1.5rem 0 1.5rem 0;
+    }
+
+    .column-50-25{
+        width: 22%;
+    }
+
+    .column-title{
+        font-size: 2.2rem;
+    }
+
+    .column-price{
+        font-size: 2.8rem;
+    }
+
+    .menu-title{
+        font-size: 1.8rem;
+    }
+    .group-title{
+        font-size: 4rem;
+    }
+
+}
+
+@media screen and (min-width:1600px) {
+    .container{
+        width: 87.5rem;
+    }
+
+    .about-us .column-50:nth-child(1) .img{
+    width: 100%;
+    height: 21.8rem; 
+    object-fit: cover;
+    }
+
+    .group-menu .menu-img{
+        height: 18.7rem;
+    }
+
+    .column-titulo{
+        font-size: 2.7rem;
+    }
+
+}
